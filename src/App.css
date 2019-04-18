@@ -16,11 +16,11 @@
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-.syllable, .sharp {
+.note {
   border-radius: 0 0 3px 3px;
 }
 
-.syllable:focus, .sharp:focus {
+.note:focus {
   outline: none;
 }
 
@@ -40,14 +40,15 @@
   border-top: none;
 }
 
-.sharp > p, .syllable > p {
+.note > p {
   font-style: italic;
   position: absolute;
+  user-select: none;
 }
 
 .sharp > p {
   top: 233px;
-  transform: translateX(-9px)
+  transform: translateX(-9px);
 }
 
 .syllable > p {
