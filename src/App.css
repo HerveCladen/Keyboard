@@ -1,33 +1,55 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  padding: 15px 15px 45px 15px;
+  min-width: 800px;
+  background-color: steelblue;
 }
 
-.App-link {
-  color: #61dafb;
+.App::before {
+  content: "Keyboard";
+  position: absolute;
+  top: -17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.syllable, .sharp {
+  border-radius: 0 0 3px 3px;
+}
+
+.syllable:focus, .sharp:focus {
+  outline: none;
+}
+
+.syllable {
+  box-shadow: 0 0 0 1px black;
+  width: 40px;
+  height: 225px;
+  background-color: white;
+}
+
+.sharp {
+  background: black;
+  width: 25px;
+  height: 140px;
+  margin: 0 -12.5px;
+  z-index: 1;
+  border-top: none;
+}
+
+.sharp > p, .syllable > p {
+  font-style: italic;
+  position: absolute;
+}
+
+.sharp > p {
+  top: 233px;
+  transform: translateX(-9px)
+}
+
+.syllable > p {
+  top: 250px;
 }
